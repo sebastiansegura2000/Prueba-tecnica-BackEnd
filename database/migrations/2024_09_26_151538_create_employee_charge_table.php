@@ -15,6 +15,8 @@ class CreateEmployeeChargeTable extends Migration
     {
         Schema::create('employee_charge', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('employee_id')->constrained('employees')->onDelete('cascade');
+            $table->foreignId('charge_id')->constrained('charges')->onDelete('cascade');
             $table->timestamps();
         });
     }
