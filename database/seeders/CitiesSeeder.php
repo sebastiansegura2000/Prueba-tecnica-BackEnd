@@ -16,19 +16,19 @@ class CitiesSeeder extends Seeder
     {
         DB::table('cities')->insert([
             // Colombia
-            ['name_city' => 'Bogotá', 'pais_id' => 1],
-            ['name_city' => 'Medellín', 'pais_id' => 1],
-            ['name_city' => 'Cali', 'pais_id' => 1],
+            ['name_city' => 'Bogotá', 'countrie_id' => 1],
+            ['name_city' => 'Medellín', 'countrie_id' => 1],
+            ['name_city' => 'Cali', 'countrie_id' => 1],
 
             // Mexico
-            ['name_city' => 'Ciudad de México', 'pais_id' => 2],
-            ['name_city' => 'Guadalajara', 'pais_id' => 2],
-            ['name_city' => 'Monterrey', 'pais_id' => 2],
+            ['name_city' => 'Ciudad de México', 'countrie_id' => 2],
+            ['name_city' => 'Guadalajara', 'countrie_id' => 2],
+            ['name_city' => 'Monterrey', 'countrie_id' => 2],
 
             // Argentina
-            ['name_city' => 'Buenos Aires', 'pais_id' => 3],
-            ['name_city' => 'Córdoba', 'pais_id' => 3],
-            ['name_city' => 'Rosario', 'pais_id' => 3]
+            ['name_city' => 'Buenos Aires', 'countrie_id' => 3],
+            ['name_city' => 'Córdoba', 'countrie_id' => 3],
+            ['name_city' => 'Rosario', 'countrie_id' => 3]
         ]);
     }
 }
