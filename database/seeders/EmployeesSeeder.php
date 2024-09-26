@@ -19,7 +19,7 @@ class EmployeesSeeder extends Seeder
                 'names' => 'Juan',
                 'last_names' => 'Pérez',
                 'identification' => '123456789',
-                'adress' => 'Calle 123',
+                'address' => 'Calle 123',
                 'phone_number' => '555-1234',
                 'city_id' => 1,
                 'boss_id' => null
@@ -28,7 +28,7 @@ class EmployeesSeeder extends Seeder
                 'names' => 'Maria',
                 'last_names' => 'Rodriguez',
                 'identification' => '987654321',
-                'adress' => 'Avenida 456',
+                'address' => 'Avenida 456',
                 'phone_number' => '555-9876',
                 'city_id' => 4,
                 'boss_id' => 1
