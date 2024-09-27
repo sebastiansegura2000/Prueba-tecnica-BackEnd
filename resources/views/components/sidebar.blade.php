@@ -22,7 +22,7 @@
                 </a>
             </li>
             <li>
-                <a href="{{ route('employees.index') }}" class="tooltip">
+                <a href="{{ route('employees.create') }}" class="tooltip">
                     <img src="{{ asset('assets/add.png') }}" alt="Add Employees">
                     <span class="link hide">Add Employees</span>
                     <span class="tooltip__content">Add Employees</span>
@@ -43,7 +43,7 @@
                 </a>
             </li>
             <li>
-                <a href="{{ route('employees.index') }}" class="tooltip">
+                <a href="{{ route('countries.create') }}" class="tooltip">
                     <img src="{{ asset('assets/Add_c.png') }}" alt="Add Country">
                     <span class="link hide">Add Country</span>
                     <span class="tooltip__content">Add Country</span>
@@ -57,14 +57,14 @@
     <div class="sidebar-links">
         <ul>
             <li>
-                <a href="{{ route('countries.index') }}" class="tooltip">
+                <a href="{{ route('cities.index') }}" class="tooltip">
                     <img src="{{ asset('assets/city.png') }}" alt="Cities">
                     <span class="link hide">Cities</span>
                     <span class="tooltip__content">Cities</span>
                 </a>
             </li>
             <li>
-                <a href="{{ route('employees.index') }}" class="tooltip">
+                <a href="{{ route('cities.create') }}" class="tooltip">
                     <img src="{{ asset('assets/buildings.png') }}" alt="Add City">
                     <span class="link hide">Add City</span>
                     <span class="tooltip__content">Add City</span>
@@ -78,14 +78,14 @@
     <div class="sidebar-links">
         <ul>
             <li>
-                <a href="{{ route('countries.index') }}" class="tooltip">
+                <a href="{{ route('charges.index') }}" class="tooltip">
                     <img src="{{ asset('assets/job.png') }}" alt="Charges">
                     <span class="link hide">Charges</span>
                     <span class="tooltip__content">Charges</span>
                 </a>
             </li>
             <li>
-                <a href="{{ route('employees.index') }}" class="tooltip">
+                <a href="{{ route('charges.create') }}" class="tooltip">
                     <img src="{{ asset('assets/add_j.png') }}" alt="Add Charges">
                     <span class="link hide">Add Charges</span>
                     <span class="tooltip__content">Add Charges</span>
