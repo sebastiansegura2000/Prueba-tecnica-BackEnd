@@ -15,9 +15,9 @@ class CountriesSeeder extends Seeder
     public function run()
     {
         DB::table('countries')->insert([
-            ['name_country' => 'Colombia'],
-            ['name_country' => 'México'],
-            ['name_country' => 'Argentina']
+            ['name' => 'Colombia'],
+            ['name' => 'México'],
+            ['name' => 'Argentina']
         ]);
     }
 }

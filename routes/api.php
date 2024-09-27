@@ -1,38 +1,35 @@
 <?php
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\EmployeeController;
-use App\Http\Controllers\CountryController;
-use App\Http\Controllers\CityController;
-use App\Http\Controllers\ChargeController;
+// routes/api.php
 
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\EmployeeController;
+use App\Http\Controllers\Api\CountryController;
+use App\Http\Controllers\Api\CityController;
+use App\Http\Controllers\Api\ChargeController;
 
 // Rutas para Countries
-Route::get('/countries', [CountryController::class, 'index']); // Listar todos los países
-Route::post('/countries', [CountryController::class, 'store']); // Crear un nuevo país
-Route::put('/countries/{country}', [CountryController::class, 'update']); // Actualizar un país
-Route::delete('/countries/{country}', [CountryController::class, 'destroy']); // Borrar un país
+Route::get('/countries', [CountryController::class, 'index']);
+Route::post('/countries', [CountryController::class, 'store']);
+Route::put('/countries/{country}', [CountryController::class, 'update']);
+Route::delete('/countries/{country}', [CountryController::class, 'destroy']);
 
 // Rutas para Cities
-Route::get('/cities', [CityController::class, 'index']); // Listar todas las ciudades
-Route::post('/cities', [CityController::class, 'store']); // Crear una nueva ciudad
-Route::put('/cities/{city}', [CityController::class, 'update']); // Actualizar una ciudad
-Route::delete('/cities/{city}', [CityController::class, 'destroy']); // Borrar una ciudad
+Route::get('/cities', [CityController::class, 'index']);
+Route::post('/cities', [CityController::class, 'store']);
+Route::put('/cities/{city}', [CityController::class, 'update']);
+Route::delete('/cities/{city}', [CityController::class, 'destroy']);
 
 // Rutas para Charges
-Route::get('/charges', [ChargeController::class, 'index']); // Listar todos los cargos
-Route::post('/charges', [ChargeController::class, 'store']); // Crear un nuevo cargo
-Route::put('/charges/{charge}', [ChargeController::class, 'update']); // Actualizar un cargo
-Route::delete('/charges/{charge}', [ChargeController::class, 'destroy']); // Borrar un cargo
+Route::get('/charges', [ChargeController::class, 'index']);
+Route::post('/charges', [ChargeController::class, 'store']);
+Route::put('/charges/{charge}', [ChargeController::class, 'update']);
+Route::delete('/charges/{charge}', [ChargeController::class, 'destroy']);
 
 // Rutas para Employees
-Route::get('/employees', [EmployeeController::class, 'index']); // Listar todos los empleados
-Route::post('/employees', [EmployeeController::class, 'store']); // Crear un nuevo empleado
-Route::put('/employees/{employee}', [EmployeeController::class, 'update']); // Actualizar un empleado
-Route::delete('/employees/{employee}', [EmployeeController::class, 'destroy']); // Borrar un empleado
-
-
-
+Route::get('/employees', [EmployeeController::class, 'index']);
+Route::post('/employees', [EmployeeController::class, 'store']);
+Route::put('/employees/{employee}', [EmployeeController::class, 'update']);
+Route::delete('/employees/{employee}', [EmployeeController::class, 'destroy']);
 Route::get('/employees/create', [EmployeeController::class, 'create']);
 Route::get('/employees/{id}', [EmployeeController::class, 'show']);

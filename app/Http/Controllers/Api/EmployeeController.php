@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
-
+use App\Http\Controllers\Controller;
 use App\Models\Employee;
 use App\Models\City;
 use App\Models\Country;
@@ -21,16 +21,14 @@ class EmployeeController extends Controller
     public function index()
     {
         $employees = Employee::with('charges', 'City')->get();
-        // return response()->json($employees);
-        return view('employees.index', compact('employees'));
+        return response()->json($employees);
     }
 
     public function create()
     {
         $countries = Country::all();
         $charges = Charge::all();
-        // return response()->json(['countries' => $countries, 'charges' => $charges]);
-        return view('employees.create', compact('countries', 'charges'));
+        return response()->json(['countries' => $countries, 'charges' => $charges]);
     }
 
     public function store(Request $request)
@@ -49,15 +47,13 @@ class EmployeeController extends Controller
         $employee = Employee::create($request->all());
         $employee->charges()->attach($request->charge_ids);
 
-        // return response()->json($employee, 201);
-        return redirect()->route('employees.index')->with('success', 'Employee created successfully');
+        return response()->json($employee, 201);
     }
 
-    public function edit(Employee $employee)
+    public function show($id)
     {
-        $countries = Country::all();
-        $charges = Charge::all();
-        return view('employees.edit', compact('employee', 'countries', 'charges'));
+        $employee = Employee::with('charges', 'boss', 'subordinates')->findOrFail($id);
+        return response()->json($employee);
     }
 
     public function update(Request $request, $id)
@@ -65,8 +61,7 @@ class EmployeeController extends Controller
         $employee = Employee::findOrFail($id);
         $employee->update($request->all());
 
-        // return response()->json($employee);
-        return redirect()->route('employees.index')->with('success', 'Employee updated successfully');
+        return response()->json($employee);
     }
 
     public function destroy($id)
@@ -74,8 +69,7 @@ class EmployeeController extends Controller
         $employee = Employee::findOrFail($id);
         $employee->delete();
 
-        // return response()->json(null, 204);
-        return redirect()->route('employees.index')->with('success', 'Employee deleted successfully');
+        return response()->json(null, 204);
     }
 
 }

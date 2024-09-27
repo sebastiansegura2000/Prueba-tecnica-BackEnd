@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 <nav>
     <div class="sidebar-top">
-        <a href="{{ route('employees.view') }}" class="logo__wrapper">
+        <a href="{{ route('employees.index') }}" class="logo__wrapper">
             <img src="{{ asset('assets/psico.png') }}" alt="Logo" class="logo">
             <h1 class="hide">PsicoAlianza</h1>
         </a>
@@ -15,14 +15,14 @@
     <div class="sidebar-links">
         <ul>
             <li>
-                <a href="{{ route('employees.view') }}" class="tooltip">
+                <a href="{{ route('employees.index') }}" class="tooltip">
                     <img src="{{ asset('assets/manager.png') }}" alt="employees">
                     <span class="link hide">Employees</span>
                     <span class="tooltip__content">Employees</span>
                 </a>
             </li>
             <li>
-                <a href="{{ route('employees.view') }}" class="tooltip">
+                <a href="{{ route('employees.index') }}" class="tooltip">
                     <img src="{{ asset('assets/add.png') }}" alt="Add Employees">
                     <span class="link hide">Add Employees</span>
                     <span class="tooltip__content">Add Employees</span>
@@ -43,7 +43,7 @@
                 </a>
             </li>
             <li>
-                <a href="{{ route('employees.view') }}" class="tooltip">
+                <a href="{{ route('employees.index') }}" class="tooltip">
                     <img src="{{ asset('assets/Add_c.png') }}" alt="Add Country">
                     <span class="link hide">Add Country</span>
                     <span class="tooltip__content">Add Country</span>
@@ -64,7 +64,7 @@
                 </a>
             </li>
             <li>
-                <a href="{{ route('employees.view') }}" class="tooltip">
+                <a href="{{ route('employees.index') }}" class="tooltip">
                     <img src="{{ asset('assets/buildings.png') }}" alt="Add City">
                     <span class="link hide">Add City</span>
                     <span class="tooltip__content">Add City</span>
@@ -85,7 +85,7 @@
                 </a>
             </li>
             <li>
-                <a href="{{ route('employees.view') }}" class="tooltip">
+                <a href="{{ route('employees.index') }}" class="tooltip">
                     <img src="{{ asset('assets/add_j.png') }}" alt="Add Charges">
                     <span class="link hide">Add Charges</span>
                     <span class="tooltip__content">Add Charges</span>
