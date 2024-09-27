@@ -34,4 +34,8 @@ Este proyecto está desarrollado en Laravel 8 y utiliza una base de datos SQLite
     php artisan serve
 
 
+## Documentation de las apis
+
+[Documentation](https://github.com/sebastiansegura2000/Prueba-tecnica-BackEnd/blob/main/README2.md)
+
 
